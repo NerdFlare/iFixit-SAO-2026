@@ -1,0 +1,194 @@
+(footprint "SunLED 3.2x2.8mm PLCC2 SMD LED"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 3 0)
+		(layer "F.SilkS")
+		(uuid "2758d410-40e0-4109-92fc-0b1a8f84004a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "SunLED_PLCC2"
+		(at 0 3.556 0)
+		(layer "F.Fab")
+		(uuid "c6936e8f-f2a1-4a2a-8a5b-826dbac583db")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7c749817-e829-4065-9795-f7798ca82d0e")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6330a344-7806-40e8-8683-8df01f3066d5")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -3.556 -1.778)
+		(end -3.302 -1.778)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a749e6ea-4e47-40cd-8519-dfb80f3ca017")
+	)
+	(fp_line
+		(start -3.556 1.778)
+		(end -3.556 -1.778)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e856dd44-a55c-4b01-a580-553930cc9671")
+	)
+	(fp_line
+		(start -3.302 -1.778)
+		(end 3.556 -1.778)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "104ac811-7537-463c-949b-dbf748eb6697")
+	)
+	(fp_line
+		(start 3.556 -1.778)
+		(end 3.556 1.778)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6c7aa8f3-db0a-46f1-9f12-194ed658c047")
+	)
+	(fp_line
+		(start 3.556 1.778)
+		(end -3.556 1.778)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ae820c4f-3b58-4612-aaaa-43672c2f9f3e")
+	)
+	(fp_text user "+"
+		(at -2.413 -3.302 0)
+		(layer "F.SilkS")
+		(uuid "55e5114f-0df9-42bc-9a2d-1db8e1ae85b6")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_text user "-"
+		(at 2.413 -3.302 0)
+		(layer "F.SilkS")
+		(uuid "ae7a643c-93fc-49fb-9d4c-ee8c8d405abd")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "" smd circle
+		(at 0 0)
+		(size 3.2 3.2)
+		(layers "F.Mask")
+		(uuid "38aa7bdd-6628-4ead-ac9b-892f094af565")
+	)
+	(pad "1" smd rect
+		(at 2.6 0)
+		(size 1.4 2.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "7a8299ea-5f53-4e1f-8d04-0bdfa57d3954")
+	)
+	(pad "2" smd rect
+		(at -2.6 0)
+		(size 1.4 2.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "dac4b6d0-f85f-4e4b-9308-1d5d152d7feb")
+	)
+	(zone
+		(layer "F.Cu")
+		(uuid "b1acd9d5-90b2-4aff-af24-e7af91df4dd6")
+		(hatch edge 0.5)
+		(connect_pads
+			(clearance 0)
+		)
+		(min_thickness 0.25)
+		(keepout
+			(tracks not_allowed)
+			(vias not_allowed)
+			(pads not_allowed)
+			(copperpour not_allowed)
+			(footprints allowed)
+		)
+		(placement
+			(enabled no)
+			(sheetname "")
+		)
+		(fill
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 0)
+		)
+		(polygon
+			(pts
+				(xy 0.373513 -1.555792) (xy 0.612293 -1.478207) (xy 0.835998 -1.364224) (xy 1.039117 -1.21665) (xy 1.21665 -1.039117)
+				(xy 1.364224 -0.835998) (xy 1.478207 -0.612293) (xy 1.555792 -0.373513) (xy 1.595068 -0.125535)
+				(xy 1.595068 0.125535) (xy 1.555792 0.373513) (xy 1.478207 0.612293) (xy 1.364224 0.835998) (xy 1.21665 1.039117)
+				(xy 1.039117 1.21665) (xy 0.835998 1.364224) (xy 0.612293 1.478207) (xy 0.373513 1.555792) (xy 0.125535 1.595068)
+				(xy -0.125535 1.595068) (xy -0.373513 1.555792) (xy -0.612293 1.478207) (xy -0.835998 1.364224)
+				(xy -1.039117 1.21665) (xy -1.21665 1.039117) (xy -1.364224 0.835998) (xy -1.478207 0.612293) (xy -1.555792 0.373513)
+				(xy -1.595068 0.125535) (xy -1.595068 -0.125535) (xy -1.555792 -0.373513) (xy -1.478207 -0.612293)
+				(xy -1.364224 -0.835998) (xy -1.21665 -1.039117) (xy -1.039117 -1.21665) (xy -0.835998 -1.364224)
+				(xy -0.612293 -1.478207) (xy -0.373513 -1.555792) (xy -0.125535 -1.595068) (xy 0.125535 -1.595068)
+			)
+		)
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/SunLED.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
