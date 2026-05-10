@@ -3948,7 +3948,7 @@
 			(roundrect_rratio 0.25)
 			(net "unconnected-(U1-PA3-Pad13)")
 			(pinfunction "PA3_13")
-			(pintype "bidirectional")
+			(pintype "bidirectional+no_connect")
 			(uuid "5effd9ed-564d-4cd7-ba92-156e2ae249f6")
 		)
 		(pad "14" smd roundrect
@@ -6162,7 +6162,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "65Ω"
+		(property "Value" "65R"
 			(at 0 -1.65 90)
 			(layer "B.Fab")
 			(uuid "4cfcc3ba-9797-4505-be2d-a329ebb4a852")
