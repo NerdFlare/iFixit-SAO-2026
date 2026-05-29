@@ -508,7 +508,7 @@
     "last_paths": {
       "idf": "",
       "netlist": "",
-      "plot": "ifixit-sao-2026-v0-plot/",
+      "plot": "ifixit-sao-2026-v0-plot-svg/",
       "specctra_dsn": "",
       "vrml": ""
     },
@@ -632,7 +632,7 @@
         "uuid": "e073140f-9b6a-4dc9-bd70-1f0f463a5e58"
       }
     ],
-    "used_designators": "SW1-2,U1,TP1,LED1-7,#PWR1-5,C1-3,D1-3,R1-12,SAO1,J1",
+    "used_designators": "D4",
     "variants": []
   },
   "sheets": [

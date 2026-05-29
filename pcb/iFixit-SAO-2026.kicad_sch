@@ -2212,6 +2212,10 @@
 		(uuid "e1238803-f57f-4219-ab46-01f9717300c7")
 	)
 	(no_connect
+		(at 154.94 109.22)
+		(uuid "e3654f36-46ca-457e-85ad-83ccb37c4ad4")
+	)
+	(no_connect
 		(at 148.59 76.2)
 		(uuid "e4343f53-45f3-4f2e-8407-f4a664d3e93c")
 	)
@@ -6061,7 +6065,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "65Ω"
+		(property "Value" "65R"
 			(at 88.9 123.1899 0)
 			(show_name no)
 			(do_not_autoplace no)
