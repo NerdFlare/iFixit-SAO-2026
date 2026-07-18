@@ -1987,7 +1987,7 @@
 		)
 		(uuid "8be56cd8-92b5-4e6f-b258-e1e9eadf11b9")
 	)
-	(text "Buttons"
+	(text "Button"
 		(exclude_from_sim no)
 		(at 97.282 148.844 0)
 		(effects
@@ -2064,12 +2064,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "218c8790-fb51-4bd8-8e46-f85df4429b92")
-	)
-	(junction
-		(at 109.22 172.72)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7893089e-043a-49c8-9c57-388cce2ac528")
 	)
 	(junction
 		(at 139.7 88.9)
@@ -2182,6 +2176,10 @@
 	(no_connect
 		(at 35.56 71.12)
 		(uuid "3da48b70-81d1-4496-866f-2661feeb8199")
+	)
+	(no_connect
+		(at 154.94 106.68)
+		(uuid "5359f3cd-74ef-4ecd-bc68-58ff3353eb45")
 	)
 	(no_connect
 		(at 234.95 115.57)
@@ -2311,16 +2309,6 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 172.72) (xy 91.44 172.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1bb48a2f-3b9c-403c-902b-31b1f3364735")
-	)
-	(wire
-		(pts
 			(xy 154.94 114.3) (xy 171.45 114.3)
 		)
 		(stroke
@@ -2391,7 +2379,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 172.72) (xy 109.22 176.53)
+			(xy 109.22 160.02) (xy 109.22 176.53)
 		)
 		(stroke
 			(width 0)
@@ -2711,16 +2699,6 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 106.68) (xy 157.48 106.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9e46e440-8951-4d63-9cb5-d768402bab3b")
-	)
-	(wire
-		(pts
 			(xy 182.88 80.01) (xy 182.88 101.6)
 		)
 		(stroke
@@ -2768,16 +2746,6 @@
 			(type default)
 		)
 		(uuid "ba4a1992-9a8f-4ced-8e80-aca9353ac897")
-	)
-	(wire
-		(pts
-			(xy 101.6 172.72) (xy 109.22 172.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "baa11131-334b-413d-8c84-96962a8ae331")
 	)
 	(wire
 		(pts
@@ -2838,16 +2806,6 @@
 			(type default)
 		)
 		(uuid "d86d90e8-075e-49bf-bca0-385f44a6055c")
-	)
-	(wire
-		(pts
-			(xy 109.22 160.02) (xy 109.22 172.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "da4998ea-f4e4-4b11-9401-97b9eeeae390")
 	)
 	(wire
 		(pts
@@ -2989,16 +2947,6 @@
 		)
 		(uuid "06e1ccb6-db54-48cb-97fb-3762a9576c91")
 	)
-	(label "BTN2"
-		(at 157.48 106.68 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "1c6e0428-db2d-40e3-a2b5-575e6219f1ef")
-	)
 	(label "0402"
 		(at 260.35 86.36 0)
 		(effects
@@ -3049,7 +2997,7 @@
 		)
 		(uuid "50f4379c-773a-4993-9706-cc3822af8dfb")
 	)
-	(label "BTN1"
+	(label "BTN"
 		(at 157.48 104.14 0)
 		(effects
 			(font
@@ -3059,7 +3007,7 @@
 		)
 		(uuid "54382f95-612d-4533-820e-9b8634aa06e9")
 	)
-	(label "BTN1"
+	(label "BTN"
 		(at 86.36 160.02 0)
 		(effects
 			(font
@@ -3118,16 +3066,6 @@
 			(justify right bottom)
 		)
 		(uuid "c720d1be-7fdc-4506-aca1-5e311e4e7f63")
-	)
-	(label "BTN2"
-		(at 86.36 172.72 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "e5525ef1-6395-4ae6-b8e7-2793d7d7ceff")
 	)
 	(label "0603"
 		(at 252.73 86.36 0)
@@ -5056,86 +4994,6 @@
 			(project "iFixit-SAO-2026"
 				(path "/e073140f-9b6a-4dc9-bd70-1f0f463a5e58"
 					(reference "LED5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Switch:SW_Push")
-		(at 96.52 172.72 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7d214a14-4548-4ad2-8c02-dadd68330a30")
-		(property "Reference" "SW2"
-			(at 96.52 165.1 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_Push"
-			(at 96.52 167.64 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_SMD:SW_SPST_PTS645Sx43SMTR92"
-			(at 96.52 167.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 96.52 167.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Push button switch, generic, two pins"
-			(at 96.52 172.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "0a217bcc-c5e1-41e9-82f2-e66cb2955c94")
-		)
-		(pin "1"
-			(uuid "7d9e70c2-3547-406b-862f-2697686cee3f")
-		)
-		(instances
-			(project "iFixit-SAO-2026"
-				(path "/e073140f-9b6a-4dc9-bd70-1f0f463a5e58"
-					(reference "SW2")
 					(unit 1)
 				)
 			)

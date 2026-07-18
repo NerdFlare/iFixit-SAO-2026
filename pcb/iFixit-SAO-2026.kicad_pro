@@ -508,7 +508,7 @@
     "last_paths": {
       "idf": "",
       "netlist": "",
-      "plot": "ifixit-sao-2026-v0-plot-svg/",
+      "plot": "ifixit-sao-2026-v0.1.1-plot/",
       "specctra_dsn": "",
       "vrml": ""
     },

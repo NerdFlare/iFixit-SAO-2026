@@ -1,47 +1,72 @@
-// iFixit SAO 2026
-// Version 0.1
+/*
+             *************             
+         *********************         
+       *************************       
+     *****************************     
+   *********************************   
+  *********   ***********   *********  
+ *********       *****       ********* 
+ **********                 ********** 
+************               ************
+**************           **************
+**************           **************
+************               ************
+ **********                 ********** 
+ *********       *****       ********* 
+  *********   **********    *********  
+   *********************************   
+     *****************************     
+       *************************       
+         *********************         
+             *************
+            iFixit SAO 2026
+              Version 0.1
+*/
 
 #include <Arduino.h>
 #include <EEPROM.h>
 #include <tinyNeoPixel.h>
 
 //Lightning Bolt
-const int D1 = PIN_PB0;
-const int D2 = PIN_PB1;
+const int D1 = PIN_PB0; //Top
+const int D2 = PIN_PB1; //Bottom
 //Soldering iron tip
 const int D3 = PIN_PA4;
-const int BTN1 = PIN_PA1;
-const int NEOPIXEL = PIN_PA5;
+//Button
+const int BTN = PIN_PA1;
 //Soldering Game
 const int R5 = PIN_PA6;
 const int R7 = PIN_PA7;
 const int R9 = PIN_PB3;
 const int R11 = PIN_PB2;
 //Neopixels
+const int NEOPIXEL = PIN_PA5;
 const int PIXEL_COUNT = 7;
 tinyNeoPixel strip = tinyNeoPixel(PIXEL_COUNT, NEOPIXEL, NEO_GRB);
 
 //Animation modes
-int NUM_MODES = 3; //Additional mode added when soldering game solved
-int mode_addr = 255;
-int mode = EEPROM.read(mode_addr);
+int num_modes_addr = 255;
+int NUM_MODES = EEPROM.read(num_modes_addr);
+int mode_addr = 254;
+int MODE = EEPROM.read(mode_addr);
 
 //Button pressed
 bool pressed = true;
 
-//fire aniamtion 
+//fire aniamtion variables
 unsigned long lastNeopixelUpdate = 0;
 const int frameDelay = 40; // ms between animation frames
 uint8_t heat[PIXEL_COUNT];
+
 //rainbow animation
 int rainbox_index = 0;
 
 //D3 LED Tip
 unsigned long lastD3Update = 0;
 int brightness = 0;  // how bright the LED is
-int fadeAmount = 1;
+int fadeAmount = 1;  // how fast do we fade
 
-//D1, D2 Lightning animation
+//D1, D2 Lightning animation variables
 enum State {
   WAITING,
   TOP_ON,
@@ -165,7 +190,7 @@ void setup() {
   pinMode(PIN_PB1, OUTPUT);
   pinMode(D3, OUTPUT);
   pinMode(NEOPIXEL, OUTPUT);
-  pinMode(BTN1, INPUT_PULLUP);
+  pinMode(BTN, INPUT_PULLUP);
   pinMode(R5, INPUT_PULLUP);
   pinMode(R7, INPUT_PULLUP);
   pinMode(R9, INPUT_PULLUP);
@@ -175,9 +200,10 @@ void setup() {
   for (int i = 0; i < strip.numPixels(); i++) {
     strip.setPixelColor(i, 0,0,0);
   }
-  strip.show(); // Initialize all pixels to 'off'
+  strip.show(); // Initialize all neopixels to 'off'
 
-  if (mode > NUM_MODES){ mode = 0;}
+  if (NUM_MODES > 4){ NUM_MODES = 3;}
+  if (MODE > NUM_MODES){ MODE = 0;}
 
   analogWrite(D1, 0);
   analogWrite(D2, 0);
@@ -185,29 +211,31 @@ void setup() {
 
 }
 
-
 void loop() {
   
   unsigned long now = millis();
 
-  if(digitalRead(R5) == LOW && digitalRead(R7) == LOW && digitalRead(R9) == LOW && digitalRead(R11) == LOW){
-    NUM_MODES = 3;
+  //Soldering Game (enable bonus mode)
+  if(NUM_MODES == 3 && digitalRead(R5) == LOW && digitalRead(R7) == LOW && digitalRead(R9) == LOW && digitalRead(R11) == LOW){
+    NUM_MODES = 4;
+    MODE = 3;
+    EEPROM.update(num_modes_addr,NUM_MODES);
   }
 
-  //Button 1
-  if (digitalRead(BTN1) == LOW && !pressed){
+  //Handle Button
+  if (digitalRead(BTN) == LOW && !pressed){
     pressed = true;
-    mode = (mode + 1) % NUM_MODES;
-    EEPROM.update(mode_addr,mode);
+    MODE = (MODE + 1) % NUM_MODES;
+    EEPROM.update(mode_addr,MODE);
     delay(20);     // Short delay to debounce button.
   }
-  if (digitalRead(BTN1) == HIGH){
+  if (digitalRead(BTN) == HIGH){
     pressed = false;
     delay(20);
   }
 
-  //Red LED
-  if(now - lastD3Update >= 10 && mode != 2){
+  //Fade Red LED
+  if(now - lastD3Update >= 10 && MODE != 2){
     lastD3Update = now;
     analogWrite(D3, brightness);
     brightness = brightness + fadeAmount;
@@ -218,8 +246,8 @@ void loop() {
     analogWrite(D3, 0);
   }
 
-  //Neopixels
-  switch (mode){
+  //Animate Neopixels
+  switch (MODE){
     case 0:
     //Candle Animation
       if (now - lastNeopixelUpdate >= frameDelay) {
@@ -235,14 +263,14 @@ void loop() {
       }
       break;
     case 2:
-      //Off
+    //Iron Off
       for (int i = 0; i < strip.numPixels(); i++) {
         strip.setPixelColor(i, 0);
       }
       strip.show();
       break;
     case 3:
-      //Rainbox Animation (BONUS)
+    //Rainbox Animation (BONUS)
       if (now - lastNeopixelUpdate >= 10){
         lastNeopixelUpdate = now;
         for (int i = strip.numPixels() - 1; i >= 0; i--) {
@@ -254,7 +282,7 @@ void loop() {
       break;
   }
 
-  //Lightening Bolt
+  //Animate Lightening Bolt
   switch (state) {
     case WAITING:
       if (now - stateStart >= waitTime) {
@@ -337,6 +365,7 @@ void loop() {
       }
       break;
   }
-  
 }
+
+// <3 znjp 
 
