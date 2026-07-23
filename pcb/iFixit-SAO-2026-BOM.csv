@@ -1,0 +1,16 @@
+Id,Designator,Footprint,Quantity,Designation,Supplier and ref,Datasheet
+1,"C1, C2",C_0603_1608Metric,2,0.1uF,,
+2,"D1, D2",SunLED 3.2x2.8mm PLCC2 SMD LED,2,LED,SunLED XZM2CYK45WT-9,https://www.sunledusa.com/products/spec/XZM2CYK45WT-9.pdf
+3,D3,LED_0402_1005Metric,1,LED,SunLED XZMDK68W-2,
+5,"LED1, LED2, LED3, LED4, LED5, LED6, LED7",SK6508-EC 15,7,SK6805-EC 15,Shenzhen Normand Electronic,https://www.normandled.com/upload/202003/SK6805-EC15 LED Datasheet.pdf
+7,"R1, R2, R4",R_0805_2012Metric,3,65R,,
+8,R3,R_0805_2012Metric,1,500R,,
+9,"R5, R7, R9, R11",DO NOT POPULATE,,R,,
+10,R6,R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,1,0R,,
+12,R8,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,1,0R,,
+14,R10,R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,1,0R,,
+16,R12,R_0402_1005Metric_Pad0.72x0.64mm_HandSolder,1,0R,,
+17,SAO1,SHITTY_ADD-ON_V1.69BIS SAO,1,~,Würth Elektronik 61200621621,
+18,"SW1, SW2",SW_SPST_PTS645Sx43SMTR92,2,SW_Push,C&K PTS645SM43SMTR92 LFS,
+19,TP1,TestPoint_Keystone_5019_Miniature,1,SAO Tether,Keystone Electronics 5019,https://www.keyelco.com/userAssets/file/K75p61.pdf
+20,U1,SOIC-14_3.9x8.7mm_P1.27mm,1,ATtiny1604-SS,Microchip Technology ATTINY1604-SSNR,https://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny804-06-07-1604-06-07-DataSheet-DS40002312A.pdf
