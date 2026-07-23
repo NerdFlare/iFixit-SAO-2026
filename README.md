@@ -71,7 +71,7 @@ For convenience, resistors of the correct sizes and values are already installed
 You can desolder the resistors from `R6`, `R8`, `R10`, and `R12`, then resolder them onto their corresponding challenge footprints. You may also use your own 0 Ω resistors instead.
 
 > [!TIP]
-> Start with the largest component, the 1206 resistor, and work toward the smallest. Use plenty of flux, fine-point tweezers, an adequate magnification—especially for the 0402 resistor, and of course, an iFixit FixHub!
+> Start with the largest component, the 1206 resistor, and work toward the smallest. Use plenty of flux, fine-point tweezers, an adequate magnification—especially for the 0402 resistor, and of course, an [iFixit FixHub](https://www.ifixit.com/Store/FixHub)!
 
 
 ![Soldering challenge](images/soldering-challenge.jpg)
@@ -85,7 +85,7 @@ It can be programmed using the **UPDI** protocol through the exposed programming
 
 A programmer such as the **Adafruit UPDI Friend** can be used to upload firmware to the badge.
 
-![UPDI programming pads](images/updi.jpg) -->
+![UPDI programming pads](images/updi.jpg)
 
 ### Firmware
 
@@ -104,8 +104,6 @@ A typical workflow is:
 > [!CAUTION]
 > The badge is designed to operate on 3.3V. Confirm the programmer voltage and all programming-pad connections before powering or programming the badge. Incorrect wiring may damage the microcontroller or programmer.
 
-<!-- PHOTO: Add a photo showing the badge connected to a UPDI programmer. -->
-<!-- Example: ![Badge connected to a UPDI programmer](images/updi-programming-setup.jpg) -->
 
 ## Collaboration
 
