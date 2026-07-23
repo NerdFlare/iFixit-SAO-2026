@@ -2,7 +2,7 @@
 
 This repository contains the firmware and supporting files for 2026 iFixit Shitty Add On (SAO) featuring multiple LED animation modes, an interactive soldering challenge, and user-programmable firmware.
 
-![2026 iFixit SAO] (images/ifixit-2026-sao.jpg)
+![2026 iFixit SAO](images/ifixit-2026-sao.jpg)
 
 ## Project Structure
 
@@ -73,11 +73,9 @@ You can desolder the resistors from `R6`, `R8`, `R10`, and `R12`, then resolder 
 > [!TIP]
 > Start with the largest component, the 1206 resistor, and work toward the smallest. Use plenty of flux, fine-point tweezers, an adequate magnification—especially for the 0402 resistor, and of course, an iFixit FixHub!
 
-<!-- PHOTO: Add a close-up photo identifying R5 through R12. -->
-<!-- Example: ![Soldering challenge footprints](images/soldering-challenge-footprints.jpg) -->
 
-<!-- PHOTO: Add a photo of the completed soldering challenge. -->
-<!-- Example: ![Completed soldering challenge](images/completed-soldering-challenge.jpg) -->
+![Soldering challenge](images/soldering-challenge.jpg)
+
 
 ## Programming the Badge
 
@@ -87,8 +85,7 @@ It can be programmed using the **UPDI** protocol through the exposed programming
 
 A programmer such as the **Adafruit UPDI Friend** can be used to upload firmware to the badge.
 
-<!-- PHOTO: Add a close-up photo labeling the UPDI programming pads. -->
-<!-- Example: ![UPDI programming pads](images/updi-programming-pads.jpg) -->
+![UPDI programming pads](images/updi.jpg) -->
 
 ### Firmware
 
@@ -109,3 +106,7 @@ A typical workflow is:
 
 <!-- PHOTO: Add a photo showing the badge connected to a UPDI programmer. -->
 <!-- Example: ![Badge connected to a UPDI programmer](images/updi-programming-setup.jpg) -->
+
+## Collaboration
+
+This PCB art badge was created as a collaboration between [**iFixit**](https://ifixit.com), the [**Cal Poly NerdFlare club**](https://www.instagram.com/nerdflareslo/), and [**znjp**](https://www.instagram.com/_znjp_/).
